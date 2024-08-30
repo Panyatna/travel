@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="ru" data-validate="html">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFETOUR</title>
+    <link rel="stylesheet" href="sass/style.scss">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+  </head>
+  <body class="page-body">
+    <header class="header header__container" data-test="header">
+      <ul class="header-list">
+        <li class="header-item header-item--button">
+          <button class="header-nav-button header-nav-button--open" type="button">
+            <span class="visually-hidden">Закрыть окно.</span>
+          </button>
+        </li>
+        <li class="header-item header-item--logo">
+          <a class="header-logo-link" href="index.html">
+            <img src="img/sprite/logo-white.svg" width="142" height="42" alt="Логотип компании.">
+          </a>
+        </li>
+        <li class="header-item header-item--phone">
+          <a class="header-link" href="tel:+78000000000">
+            <span class="visually-hidden">Телефон компании.</span>
+            8 800 000-00-00
+          </a>
+        </li>
+        <li class="header-item header-item--menu">
+          <nav class="header-navigation header__navigation">
+            <ul class="header-navigation__list">
+              <li class="header-navigation__item">
+                <a class="header-navigation__link" href="#tours">Туры</a>
+              </li>
+              <li class="header-navigation__item">
+                <a class="header-navigation__link" href="#training">Обучение</a>
+              </li>
+              <li class="header-navigation__item">
+                <a class="header-navigation__link" href="#about">О нас</a>
+              </li>
+              <li class="header-navigation__item">
+                <a class="header-navigation__link" href="#reviews">Отзывы</a>
+              </li>
+              <li class="header-navigation__item">
+                <a class="header-navigation__link" href="#gallery">Фотографии</a>
+              </li>
+              <li class="header-navigation__item">
+                <a class="header-navigation__link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </li>
+      </ul>
+    </header>
+    <main class="main">
+      <div class="main__mountain-background"></div>
+      <div class="main__cloud-small-background"></div>
+      <div class="main__cloud-big-background"></div>
+      <section class="hero" data-test="hero">
+        <h1 class="visually-hidden">Походы в горы</h1>
+        <div class="swiper-hero">
+          <div class="swiper-wrapper">
+            <div class="hero-container hero-container__caucasus swiper-slide">
+              <div class="hero-container__wrapper-caucasus">
+                <h2>Захватывающие вершины Кавказа</h2>
+                <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
+                <a class="hero-link hero__link" href="#">Смотреть тур</a>
+                <ul class="hero-description-list">
+                  <li class="hero-description-item hero-description-item--duration">
+                    <span class="hero-description-text">6 дней/5 ночей</span>
+                  </li>
+                  <li class="hero-description-item hero-description-item--level">
+                    <span class="hero-description-text">Высокая сложность</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="hero-container hero-container__kamchatka swiper-slide">
+              <div class="hero-container__wrapper-kamchatka">
+                <h2>Невероятная природа Камчатки</h2>
+                <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+                <a class="hero-link hero__link" href="#">Смотреть тур</a>
+                <div class="hero-photo-wrapper--lake"></div>
+                <div class="hero-photo-wrapper--tourist"></div>
+                <ul class="hero-description-list">
+                  <li class="hero-description-item hero-description-item--duration">
+                    <span class="hero-description-text">9 дней/10 ночей</span>
+                  </li>
+                  <li class="hero-description-item hero-description-item--level">
+                    <span class="hero-description-text">Средняя сложность</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="hero-container hero-container__altai swiper-slide">
+              <div class="hero-container__wrapper-altai">
+                <h2>Магические пейзажи Алтайского Края</h2>
+                <p>Алтайский трекинг-тур – это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
+                <a class="hero-link hero__link" href="#">Смотреть тур</a>
+                <ul class="hero-description-list">
+                  <li class="hero-description-item hero-description-item--duration">
+                    <span class="hero-description-text">8 дней/7 ночей</span>
+                  </li>
+                  <li class="hero-description-item hero-description-item--level">
+                    <span class="hero-description-text">Лёгкая сложность</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="tours tours__container" data-test="tours" id="tours">
+        <h3 class="tours-title tours__title">Ближайшие туры</h3>
+        <span class="tours-title-shadow tours-title__shadow" aria-hidden="true">Ближайшие туры</span>
+        <ul class="tours-button-swiper-list">
+          <li class="tours-button-swiper-item">
+            <button class="tours-button-prev" type="button">
+              <span class="visually-hidden">Стрелка назад.</span>
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.646446 4.85355C0.451184 4.65829 0.451184 4.34171 0.646446 4.14645L3.82843 0.964466C4.02369 0.769204 4.34027 0.769204 4.53553 0.964466C4.7308 1.15973 4.7308 1.47631 4.53553 1.67157L1.70711 4.5L4.53553 7.32843C4.7308 7.52369 4.7308 7.84027 4.53553 8.03553C4.34027 8.2308 4.02369 8.2308 3.82843 8.03553L0.646446 4.85355ZM14 5H1V4H14V5Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </li>
+          <li class="tours-button-swiper-item">
+            <button class="tours-button-next" type="button">
+              <span class="visually-hidden">Стрелка вперёд.</span>
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3536 4.85355C13.5488 4.65829 13.5488 4.34171 13.3536 4.14645L10.1716 0.964466C9.97631 0.769204 9.65973 0.769204 9.46447 0.964466C9.2692 1.15973 9.2692 1.47631 9.46447 1.67157L12.2929 4.5L9.46447 7.32843C9.2692 7.52369 9.2692 7.84027 9.46447 8.03553C9.65973 8.2308 9.97631 8.2308 10.1716 8.03553L13.3536 4.85355ZM0 5H13V4H0V5Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <div class="swiper-tours">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="tours-wrapper tours-wrapper--caucasus tours__wrapper">
+                <ul class="tours-duration-list tours-duration-list--caucasus">
+                  <li class="tours-duration-item">
+                    <span class="tours-location tours-location--pin">Кавказ</span>
+                  </li>
+                  <li class="tours-duration-item">
+                    <ul class="tours-duration-info-list">
+                      <li class="tours-duration-info-item tours-duration-info-item--south">
+                        <span class="tours-duration-text">4 дня</span>
+                      </li>
+                      <li class="tours-duration-info-item tours-duration-info-item--moon">
+                        <span class="tours-duration-text">3 ночи</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h4 class="tours-wrapper-title tours-wrapper__title">Путешествие вокруг Эльбруса</h4>
+                <ul class="tours-information-list">
+                  <li class="tours-information-item">
+                    <span class="tours-information-title">Сложность:</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-title">Даты набора:</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-title">Группа:</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <ul class="tours-information-star-list">
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63441 10.5484L10.8153 12.3073L9.97596 8.99895L12.6574 6.86844L9.11688 6.58989L7.63441 3.38311L6.15197 6.58989L2.61141 6.86844L5.29286 8.99895L4.45356 12.3073L7.63441 10.5484ZM2.91634 14.3L4.16458 9.37971L0 6.0708L5.48992 5.63889L7.63441 1L9.77893 5.63889L15.2688 6.0708L11.1042 9.37971L12.3525 14.3L7.63441 11.6911L2.91634 14.3Z" fill="white"/>
+                        </svg>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-text">12.06–19.06</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-text">до 15 чел.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tours-wrapper tours-wrapper--altai tours__wrapper tours__wrapper--altai">
+                <ul class="tours-duration-list">
+                  <li class="tours-duration-item">
+                    <span class="tours-location tours-location--pin">Алтай</span>
+                  </li>
+                  <li class="tours-duration-item">
+                    <ul class="tours-duration-info-list">
+                      <li class="tours-duration-info-item tours-duration-info-item--south">
+                        <span class="tours-duration-text">14 дней</span>
+                      </li>
+                      <li class="tours-duration-info-item tours-duration-info-item--moon">
+                        <span class="tours-duration-text">13 ночей</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h4 class="tours-wrapper-title tours-wrapper__title">Путь к подножию Белухи</h4>
+                <ul class="tours-information-list tours-information-list--altai">
+                  <li class="tours-information-item">
+                    <span class="tours-information-title">Сложность:</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-title">Даты набора:</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-title">Группа:</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <ul class="tours-information-star-list">
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63441 10.5484L10.8153 12.3073L9.97596 8.99895L12.6574 6.86844L9.11688 6.58989L7.63441 3.38311L6.15197 6.58989L2.61141 6.86844L5.29286 8.99895L4.45356 12.3073L7.63441 10.5484ZM2.91634 14.3L4.16458 9.37971L0 6.0708L5.48992 5.63889L7.63441 1L9.77893 5.63889L15.2688 6.0708L11.1042 9.37971L12.3525 14.3L7.63441 11.6911L2.91634 14.3Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63441 10.5484L10.8153 12.3073L9.97596 8.99895L12.6574 6.86844L9.11688 6.58989L7.63441 3.38311L6.15197 6.58989L2.61141 6.86844L5.29286 8.99895L4.45356 12.3073L7.63441 10.5484ZM2.91634 14.3L4.16458 9.37971L0 6.0708L5.48992 5.63889L7.63441 1L9.77893 5.63889L15.2688 6.0708L11.1042 9.37971L12.3525 14.3L7.63441 11.6911L2.91634 14.3Z" fill="white"/>
+                        </svg>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-text">14.06–23.06</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-text">до 25 чел.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tours-wrapper tours-wrapper--adygea tours__wrapper tours__wrapper--adygea">
+                <ul class="tours-duration-list">
+                  <li class="tours-duration-item">
+                    <span class="tours-location tours-location--pin">Адыгея</span>
+                  </li>
+                  <li class="tours-duration-item">
+                    <ul class="tours-duration-info-list">
+                      <li class="tours-duration-info-item tours-duration-info-item--south">
+                        <span class="tours-duration-text">7 дней</span>
+                      </li>
+                      <li class="tours-duration-info-item tours-duration-info-item--moon">
+                        <span class="tours-duration-text">6 ночей</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h4 class="tours-wrapper-title tours-wrapper__title">Через Фишт<br> к Чёрному морю<br> и обратно</h4>
+                <ul class="tours-information-list tours-information-list--adygea">
+                  <li class="tours-information-item">
+                    <span class="tours-information-title">Сложность:</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-title">Даты набора:</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-title">Группа:</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <ul class="tours-information-star-list">
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63441 10.5484L10.8153 12.3073L9.97596 8.99895L12.6574 6.86844L9.11688 6.58989L7.63441 3.38311L6.15197 6.58989L2.61141 6.86844L5.29286 8.99895L4.45356 12.3073L7.63441 10.5484ZM2.91634 14.3L4.16458 9.37971L0 6.0708L5.48992 5.63889L7.63441 1L9.77893 5.63889L15.2688 6.0708L11.1042 9.37971L12.3525 14.3L7.63441 11.6911L2.91634 14.3Z" fill="white"/>
+                        </svg>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-text">15.07–19.07</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-text">до 22 чел.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tours-wrapper tours-wrapper--ural tours__wrapper">
+                <ul class="tours-duration-list tours-duration-list--ural">
+                  <li class="tours-duration-item">
+                    <span class="tours-location tours-location--pin">Урал</span>
+                  </li>
+                  <li class="tours-duration-item">
+                    <ul class="tours-duration-info-list tours-duration-info-list--ural">
+                      <li class="tours-duration-info-item tours-duration-info-item--south">
+                        <span class="tours-duration-text">9 дней</span>
+                      </li>
+                      <li class="tours-duration-info-item tours-duration-info-item--moon">
+                        <span class="tours-duration-text">10 ночей</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <h4 class="tours-wrapper-title tours-wrapper__title">Восхождение Манарага</h4>
+                <ul class="tours-information-list">
+                  <li class="tours-information-item">
+                    <span class="tours-information-title">Сложность:</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-title">Даты набора:</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-title">Группа:</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <ul class="tours-information-star-list">
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                      <li class="tours-information-star-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.63441 11.6911L12.3525 14.3L11.1042 9.37971L15.2688 6.0708L9.77893 5.63889L7.63441 1L5.48992 5.63889L0 6.0708L4.16458 9.37971L2.91634 14.3L7.63441 11.6911Z" fill="white"/>
+                        </svg>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-text">12.07–19.07</span>
+                  </li>
+                  <li class="tours-information-item">
+                    <span class="tours-information-text">до 7 чел.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="tours-link" href="#">
+          Показать все туры
+          <svg class="tours-link-arrow" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 13L7 7L0.999999 1" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </a>
+      </section>
+      <section class="training training-education training__container" data-test="training" id="training">
+        <div class="training-education-wrapper">
+          <h3 class="tours-title">Обучение</h3>
+          <span class="tours-title-shadow training-title training-title__shadow" aria-hidden="true">Обучение</span>
+          <p>Обучение проводится квалифицированными специалистами,<br> за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+        </div>
+        <h3 class="tours-title training__title">Наши инструкторы</h3>
+        <ul class="training-button-swiper-list">
+          <li class="training-button-swiper-item">
+            <button class="training-button-prev" type="button">
+              <span class="visually-hidden">Стрелка назад.</span>
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.646446 4.85355C0.451184 4.65829 0.451184 4.34171 0.646446 4.14645L3.82843 0.964466C4.02369 0.769204 4.34027 0.769204 4.53553 0.964466C4.7308 1.15973 4.7308 1.47631 4.53553 1.67157L1.70711 4.5L4.53553 7.32843C4.7308 7.52369 4.7308 7.84027 4.53553 8.03553C4.34027 8.2308 4.02369 8.2308 3.82843 8.03553L0.646446 4.85355ZM14 5H1V4H14V5Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </li>
+          <li class="training-button-swiper-item">
+            <button class="training-button-next" type="button">
+              <span class="visually-hidden">Стрелка вперёд.</span>
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3536 4.85355C13.5488 4.65829 13.5488 4.34171 13.3536 4.14645L10.1716 0.964466C9.97631 0.769204 9.65973 0.769204 9.46447 0.964466C9.2692 1.15973 9.2692 1.47631 9.46447 1.67157L12.2929 4.5L9.46447 7.32843C9.2692 7.52369 9.2692 7.84027 9.46447 8.03553C9.65973 8.2308 9.97631 8.2308 10.1716 8.03553L13.3536 4.85355ZM0 5H13V4H0V5Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <div class="swiper-training">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="training__wrapper training__wrapper--prokofiev">
+                <div class="training-img-container">
+                  <img class="training-img" src="img/training/trainer-prokofiev.jpg" srcset="img/training/trainer-prokofiev@2x.jpg 2x" width="260" height="200" alt="Тренер Александр Прокофьев.">
+                </div>
+                <ul class="training-trainer-list training-trainer__list">
+                  <li class="training-trainer-item">
+                    <span>Александр Прокофьев</span>
+                  </li>
+                  <li class="training-trainer-item">
+                    <a class="training-trainer-link" href="#">
+                      <span class="visually-hidden">Социальная сеть тренера.</span>
+                      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.9258 7.22585C13.9088 7.18926 13.893 7.15891 13.8783 7.13459C13.6354 6.69645 13.1712 6.15865 12.4861 5.52106L12.4716 5.50646L12.4643 5.4993L12.457 5.49196H12.4497C12.1387 5.19506 11.9418 4.99543 11.8593 4.89323C11.7084 4.69854 11.6746 4.50147 11.7571 4.30179C11.8154 4.15092 12.0342 3.83232 12.4131 3.34554C12.6125 3.08756 12.7703 2.8808 12.8869 2.72502C13.7276 1.60555 14.0921 0.8902 13.9803 0.578677L13.9369 0.505878C13.9077 0.462051 13.8324 0.421956 13.711 0.385391C13.5894 0.348902 13.434 0.342868 13.2444 0.367185L11.1452 0.381709C11.1111 0.369639 11.0626 0.370764 10.9993 0.385391C10.9361 0.400017 10.9045 0.407356 10.9045 0.407356L10.868 0.425639L10.839 0.447603C10.8147 0.462127 10.788 0.487672 10.7588 0.524187C10.7297 0.560573 10.7055 0.603275 10.6861 0.651935C10.4575 1.24084 10.1977 1.78838 9.90602 2.29452C9.7262 2.59633 9.56107 2.85789 9.41026 3.07935C9.25966 3.30074 9.1333 3.46385 9.03133 3.56841C8.92921 3.67307 8.83705 3.75691 8.75428 3.82025C8.67163 3.88361 8.60855 3.91038 8.56486 3.90059C8.52108 3.8908 8.47985 3.88108 8.44081 3.87136C8.37282 3.82754 8.31813 3.76793 8.2769 3.6925C8.23549 3.61707 8.20761 3.52212 8.19303 3.40775C8.17853 3.2933 8.16995 3.19485 8.1675 3.11208C8.16523 3.02941 8.16628 2.91248 8.17121 2.76161C8.17626 2.61067 8.17853 2.50854 8.17853 2.455C8.17853 2.27002 8.18213 2.06927 8.18936 1.85269C8.19671 1.63611 8.20266 1.46451 8.20764 1.33809C8.21259 1.21154 8.21489 1.07766 8.21489 0.936508C8.21489 0.79536 8.20631 0.684665 8.18936 0.604324C8.17261 0.524084 8.1469 0.446197 8.11302 0.370688C8.07894 0.295256 8.02905 0.236904 7.96359 0.19548C7.898 0.154108 7.81646 0.121275 7.71941 0.0968811C7.46183 0.0385041 7.13384 0.00692482 6.73528 0.00201533C5.83147 -0.00770139 5.25072 0.0507522 4.99317 0.1773C4.89112 0.230767 4.79878 0.303821 4.71621 0.396232C4.62872 0.503346 4.61651 0.5618 4.67968 0.571415C4.97129 0.615166 5.17773 0.719825 5.29923 0.88529L5.34302 0.972971C5.37707 1.03623 5.41108 1.14823 5.44511 1.30881C5.47909 1.46939 5.50103 1.64703 5.51068 1.84162C5.53493 2.19697 5.53493 2.50115 5.51068 2.7542C5.48635 3.00734 5.46337 3.20441 5.44144 3.34556C5.41951 3.48671 5.38672 3.60109 5.34302 3.68866C5.29923 3.77627 5.2701 3.82981 5.2555 3.84925C5.24092 3.86868 5.22877 3.88093 5.21912 3.88573C5.15595 3.90998 5.09026 3.92233 5.02227 3.92233C4.95418 3.92233 4.87162 3.88822 4.77445 3.82004C4.6773 3.75187 4.57648 3.65824 4.47198 3.53898C4.36749 3.41969 4.24964 3.253 4.11838 3.03887C3.98723 2.82475 3.85115 2.57168 3.71023 2.27966L3.59363 2.06789C3.52074 1.93165 3.42117 1.73328 3.29481 1.47295C3.16839 1.21251 3.05664 0.960595 2.95949 0.717242C2.92066 0.615038 2.86232 0.537227 2.78458 0.483683L2.7481 0.461718C2.72385 0.442285 2.68491 0.421649 2.6315 0.399659C2.57801 0.377694 2.5222 0.361943 2.46384 0.352251L0.466599 0.366776C0.262507 0.366776 0.124028 0.413083 0.0511125 0.505571L0.0219309 0.549322C0.00735285 0.57369 0 0.612608 0 0.666178C0 0.719722 0.014578 0.785438 0.0437596 0.863249C0.33532 1.54956 0.652386 2.21144 0.994957 2.84901C1.33753 3.48658 1.63522 4.00016 1.88784 4.38929C2.14052 4.7787 2.39807 5.14622 2.6605 5.49168C2.92293 5.83726 3.09665 6.05872 3.18164 6.15602C3.26673 6.25349 3.33357 6.32637 3.38216 6.37503L3.56442 6.55021C3.68104 6.66704 3.8523 6.80696 4.07828 6.96997C4.3043 7.13309 4.55453 7.29367 4.82908 7.45197C5.10369 7.61002 5.42316 7.739 5.78766 7.83875C6.15211 7.9386 6.50683 7.97867 6.85188 7.95934H7.69016C7.86017 7.94464 7.98897 7.89109 8.07651 7.79868L8.10552 7.76209C8.12502 7.73304 8.14328 7.68791 8.16013 7.62718C8.17718 7.56635 8.18566 7.49933 8.18566 7.42643C8.18068 7.21719 8.19658 7.02861 8.23294 6.86071C8.26927 6.69287 8.31068 6.56632 8.35699 6.48109C8.40328 6.39595 8.45552 6.32409 8.51365 6.26584C8.57191 6.20747 8.61342 6.1721 8.63778 6.15993C8.66198 6.14768 8.68131 6.13937 8.69589 6.13439C8.81251 6.09547 8.94976 6.13316 9.10785 6.24764C9.26581 6.36201 9.41396 6.50324 9.55254 6.67108C9.69105 6.83908 9.85746 7.02756 10.0518 7.2368C10.2463 7.44612 10.4163 7.60171 10.562 7.70407L10.7078 7.79167C10.8051 7.85013 10.9314 7.90367 11.087 7.95233C11.2422 8.00097 11.3782 8.01314 11.495 7.98882L13.361 7.95967C13.5456 7.95967 13.6892 7.92906 13.7911 7.86833C13.8931 7.8075 13.9538 7.74048 13.9733 7.66758C13.9928 7.5946 13.9939 7.51181 13.977 7.41924C13.9597 7.32691 13.9427 7.26234 13.9258 7.22585Z" fill="currentColor"/>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+                <p>Строгий и внимательный инструктор, весёлый<br> и общительный человек. Любит природу.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="training__wrapper training__wrapper--afigenova">
+                <div class="training-img-container">
+                  <img class="training-img" src="img/training/trainer-afigenova.jpg" srcset="img/training/trainer-afigenova@2x.jpg 2x" width="260" height="200" alt="Тренер Светлана Афиногенова.">
+                </div>
+                <ul class="training-trainer-list training-trainer__list">
+                  <li class="training-trainer-item">
+                    <span>Светлана Афиногенова</span>
+                  </li>
+                  <li class="training-trainer-item">
+                    <a class="training-trainer-link" href="#">
+                      <span class="visually-hidden">Социальная сеть тренера.</span>
+                      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.9258 7.22585C13.9088 7.18926 13.893 7.15891 13.8783 7.13459C13.6354 6.69645 13.1712 6.15865 12.4861 5.52106L12.4716 5.50646L12.4643 5.4993L12.457 5.49196H12.4497C12.1387 5.19506 11.9418 4.99543 11.8593 4.89323C11.7084 4.69854 11.6746 4.50147 11.7571 4.30179C11.8154 4.15092 12.0342 3.83232 12.4131 3.34554C12.6125 3.08756 12.7703 2.8808 12.8869 2.72502C13.7276 1.60555 14.0921 0.8902 13.9803 0.578677L13.9369 0.505878C13.9077 0.462051 13.8324 0.421956 13.711 0.385391C13.5894 0.348902 13.434 0.342868 13.2444 0.367185L11.1452 0.381709C11.1111 0.369639 11.0626 0.370764 10.9993 0.385391C10.9361 0.400017 10.9045 0.407356 10.9045 0.407356L10.868 0.425639L10.839 0.447603C10.8147 0.462127 10.788 0.487672 10.7588 0.524187C10.7297 0.560573 10.7055 0.603275 10.6861 0.651935C10.4575 1.24084 10.1977 1.78838 9.90602 2.29452C9.7262 2.59633 9.56107 2.85789 9.41026 3.07935C9.25966 3.30074 9.1333 3.46385 9.03133 3.56841C8.92921 3.67307 8.83705 3.75691 8.75428 3.82025C8.67163 3.88361 8.60855 3.91038 8.56486 3.90059C8.52108 3.8908 8.47985 3.88108 8.44081 3.87136C8.37282 3.82754 8.31813 3.76793 8.2769 3.6925C8.23549 3.61707 8.20761 3.52212 8.19303 3.40775C8.17853 3.2933 8.16995 3.19485 8.1675 3.11208C8.16523 3.02941 8.16628 2.91248 8.17121 2.76161C8.17626 2.61067 8.17853 2.50854 8.17853 2.455C8.17853 2.27002 8.18213 2.06927 8.18936 1.85269C8.19671 1.63611 8.20266 1.46451 8.20764 1.33809C8.21259 1.21154 8.21489 1.07766 8.21489 0.936508C8.21489 0.79536 8.20631 0.684665 8.18936 0.604324C8.17261 0.524084 8.1469 0.446197 8.11302 0.370688C8.07894 0.295256 8.02905 0.236904 7.96359 0.19548C7.898 0.154108 7.81646 0.121275 7.71941 0.0968811C7.46183 0.0385041 7.13384 0.00692482 6.73528 0.00201533C5.83147 -0.00770139 5.25072 0.0507522 4.99317 0.1773C4.89112 0.230767 4.79878 0.303821 4.71621 0.396232C4.62872 0.503346 4.61651 0.5618 4.67968 0.571415C4.97129 0.615166 5.17773 0.719825 5.29923 0.88529L5.34302 0.972971C5.37707 1.03623 5.41108 1.14823 5.44511 1.30881C5.47909 1.46939 5.50103 1.64703 5.51068 1.84162C5.53493 2.19697 5.53493 2.50115 5.51068 2.7542C5.48635 3.00734 5.46337 3.20441 5.44144 3.34556C5.41951 3.48671 5.38672 3.60109 5.34302 3.68866C5.29923 3.77627 5.2701 3.82981 5.2555 3.84925C5.24092 3.86868 5.22877 3.88093 5.21912 3.88573C5.15595 3.90998 5.09026 3.92233 5.02227 3.92233C4.95418 3.92233 4.87162 3.88822 4.77445 3.82004C4.6773 3.75187 4.57648 3.65824 4.47198 3.53898C4.36749 3.41969 4.24964 3.253 4.11838 3.03887C3.98723 2.82475 3.85115 2.57168 3.71023 2.27966L3.59363 2.06789C3.52074 1.93165 3.42117 1.73328 3.29481 1.47295C3.16839 1.21251 3.05664 0.960595 2.95949 0.717242C2.92066 0.615038 2.86232 0.537227 2.78458 0.483683L2.7481 0.461718C2.72385 0.442285 2.68491 0.421649 2.6315 0.399659C2.57801 0.377694 2.5222 0.361943 2.46384 0.352251L0.466599 0.366776C0.262507 0.366776 0.124028 0.413083 0.0511125 0.505571L0.0219309 0.549322C0.00735285 0.57369 0 0.612608 0 0.666178C0 0.719722 0.014578 0.785438 0.0437596 0.863249C0.33532 1.54956 0.652386 2.21144 0.994957 2.84901C1.33753 3.48658 1.63522 4.00016 1.88784 4.38929C2.14052 4.7787 2.39807 5.14622 2.6605 5.49168C2.92293 5.83726 3.09665 6.05872 3.18164 6.15602C3.26673 6.25349 3.33357 6.32637 3.38216 6.37503L3.56442 6.55021C3.68104 6.66704 3.8523 6.80696 4.07828 6.96997C4.3043 7.13309 4.55453 7.29367 4.82908 7.45197C5.10369 7.61002 5.42316 7.739 5.78766 7.83875C6.15211 7.9386 6.50683 7.97867 6.85188 7.95934H7.69016C7.86017 7.94464 7.98897 7.89109 8.07651 7.79868L8.10552 7.76209C8.12502 7.73304 8.14328 7.68791 8.16013 7.62718C8.17718 7.56635 8.18566 7.49933 8.18566 7.42643C8.18068 7.21719 8.19658 7.02861 8.23294 6.86071C8.26927 6.69287 8.31068 6.56632 8.35699 6.48109C8.40328 6.39595 8.45552 6.32409 8.51365 6.26584C8.57191 6.20747 8.61342 6.1721 8.63778 6.15993C8.66198 6.14768 8.68131 6.13937 8.69589 6.13439C8.81251 6.09547 8.94976 6.13316 9.10785 6.24764C9.26581 6.36201 9.41396 6.50324 9.55254 6.67108C9.69105 6.83908 9.85746 7.02756 10.0518 7.2368C10.2463 7.44612 10.4163 7.60171 10.562 7.70407L10.7078 7.79167C10.8051 7.85013 10.9314 7.90367 11.087 7.95233C11.2422 8.00097 11.3782 8.01314 11.495 7.98882L13.361 7.95967C13.5456 7.95967 13.6892 7.92906 13.7911 7.86833C13.8931 7.8075 13.9538 7.74048 13.9733 7.66758C13.9928 7.5946 13.9939 7.51181 13.977 7.41924C13.9597 7.32691 13.9427 7.26234 13.9258 7.22585Z" fill="currentColor"/>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+                <p>Видеть мир вокруг, познавать<br> его опасности, находить друг друга, становиться ближе, чувствовать —<br> в этом назначение жизни.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="training__wrapper training__wrapper--kolesnichenko">
+                <div class="training-img-container">
+                  <img class="training-img" src="img/training/trainer-kolesnichenko.jpg" srcset="img/training/trainer-kolesnichenko@2x.jpg 2x" width="260" height="200" alt="Тренер Надежда Колесниченко.">
+                </div>
+                <ul class="training-trainer-list training-trainer__list">
+                  <li class="training-trainer-item">
+                    <span>Надежда Колесниченко</span>
+                  </li>
+                  <li class="training-trainer-item">
+                    <a class="training-trainer-link" href="#">
+                      <span class="visually-hidden">Социальная сеть тренера.</span>
+                      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.9258 7.22585C13.9088 7.18926 13.893 7.15891 13.8783 7.13459C13.6354 6.69645 13.1712 6.15865 12.4861 5.52106L12.4716 5.50646L12.4643 5.4993L12.457 5.49196H12.4497C12.1387 5.19506 11.9418 4.99543 11.8593 4.89323C11.7084 4.69854 11.6746 4.50147 11.7571 4.30179C11.8154 4.15092 12.0342 3.83232 12.4131 3.34554C12.6125 3.08756 12.7703 2.8808 12.8869 2.72502C13.7276 1.60555 14.0921 0.8902 13.9803 0.578677L13.9369 0.505878C13.9077 0.462051 13.8324 0.421956 13.711 0.385391C13.5894 0.348902 13.434 0.342868 13.2444 0.367185L11.1452 0.381709C11.1111 0.369639 11.0626 0.370764 10.9993 0.385391C10.9361 0.400017 10.9045 0.407356 10.9045 0.407356L10.868 0.425639L10.839 0.447603C10.8147 0.462127 10.788 0.487672 10.7588 0.524187C10.7297 0.560573 10.7055 0.603275 10.6861 0.651935C10.4575 1.24084 10.1977 1.78838 9.90602 2.29452C9.7262 2.59633 9.56107 2.85789 9.41026 3.07935C9.25966 3.30074 9.1333 3.46385 9.03133 3.56841C8.92921 3.67307 8.83705 3.75691 8.75428 3.82025C8.67163 3.88361 8.60855 3.91038 8.56486 3.90059C8.52108 3.8908 8.47985 3.88108 8.44081 3.87136C8.37282 3.82754 8.31813 3.76793 8.2769 3.6925C8.23549 3.61707 8.20761 3.52212 8.19303 3.40775C8.17853 3.2933 8.16995 3.19485 8.1675 3.11208C8.16523 3.02941 8.16628 2.91248 8.17121 2.76161C8.17626 2.61067 8.17853 2.50854 8.17853 2.455C8.17853 2.27002 8.18213 2.06927 8.18936 1.85269C8.19671 1.63611 8.20266 1.46451 8.20764 1.33809C8.21259 1.21154 8.21489 1.07766 8.21489 0.936508C8.21489 0.79536 8.20631 0.684665 8.18936 0.604324C8.17261 0.524084 8.1469 0.446197 8.11302 0.370688C8.07894 0.295256 8.02905 0.236904 7.96359 0.19548C7.898 0.154108 7.81646 0.121275 7.71941 0.0968811C7.46183 0.0385041 7.13384 0.00692482 6.73528 0.00201533C5.83147 -0.00770139 5.25072 0.0507522 4.99317 0.1773C4.89112 0.230767 4.79878 0.303821 4.71621 0.396232C4.62872 0.503346 4.61651 0.5618 4.67968 0.571415C4.97129 0.615166 5.17773 0.719825 5.29923 0.88529L5.34302 0.972971C5.37707 1.03623 5.41108 1.14823 5.44511 1.30881C5.47909 1.46939 5.50103 1.64703 5.51068 1.84162C5.53493 2.19697 5.53493 2.50115 5.51068 2.7542C5.48635 3.00734 5.46337 3.20441 5.44144 3.34556C5.41951 3.48671 5.38672 3.60109 5.34302 3.68866C5.29923 3.77627 5.2701 3.82981 5.2555 3.84925C5.24092 3.86868 5.22877 3.88093 5.21912 3.88573C5.15595 3.90998 5.09026 3.92233 5.02227 3.92233C4.95418 3.92233 4.87162 3.88822 4.77445 3.82004C4.6773 3.75187 4.57648 3.65824 4.47198 3.53898C4.36749 3.41969 4.24964 3.253 4.11838 3.03887C3.98723 2.82475 3.85115 2.57168 3.71023 2.27966L3.59363 2.06789C3.52074 1.93165 3.42117 1.73328 3.29481 1.47295C3.16839 1.21251 3.05664 0.960595 2.95949 0.717242C2.92066 0.615038 2.86232 0.537227 2.78458 0.483683L2.7481 0.461718C2.72385 0.442285 2.68491 0.421649 2.6315 0.399659C2.57801 0.377694 2.5222 0.361943 2.46384 0.352251L0.466599 0.366776C0.262507 0.366776 0.124028 0.413083 0.0511125 0.505571L0.0219309 0.549322C0.00735285 0.57369 0 0.612608 0 0.666178C0 0.719722 0.014578 0.785438 0.0437596 0.863249C0.33532 1.54956 0.652386 2.21144 0.994957 2.84901C1.33753 3.48658 1.63522 4.00016 1.88784 4.38929C2.14052 4.7787 2.39807 5.14622 2.6605 5.49168C2.92293 5.83726 3.09665 6.05872 3.18164 6.15602C3.26673 6.25349 3.33357 6.32637 3.38216 6.37503L3.56442 6.55021C3.68104 6.66704 3.8523 6.80696 4.07828 6.96997C4.3043 7.13309 4.55453 7.29367 4.82908 7.45197C5.10369 7.61002 5.42316 7.739 5.78766 7.83875C6.15211 7.9386 6.50683 7.97867 6.85188 7.95934H7.69016C7.86017 7.94464 7.98897 7.89109 8.07651 7.79868L8.10552 7.76209C8.12502 7.73304 8.14328 7.68791 8.16013 7.62718C8.17718 7.56635 8.18566 7.49933 8.18566 7.42643C8.18068 7.21719 8.19658 7.02861 8.23294 6.86071C8.26927 6.69287 8.31068 6.56632 8.35699 6.48109C8.40328 6.39595 8.45552 6.32409 8.51365 6.26584C8.57191 6.20747 8.61342 6.1721 8.63778 6.15993C8.66198 6.14768 8.68131 6.13937 8.69589 6.13439C8.81251 6.09547 8.94976 6.13316 9.10785 6.24764C9.26581 6.36201 9.41396 6.50324 9.55254 6.67108C9.69105 6.83908 9.85746 7.02756 10.0518 7.2368C10.2463 7.44612 10.4163 7.60171 10.562 7.70407L10.7078 7.79167C10.8051 7.85013 10.9314 7.90367 11.087 7.95233C11.2422 8.00097 11.3782 8.01314 11.495 7.98882L13.361 7.95967C13.5456 7.95967 13.6892 7.92906 13.7911 7.86833C13.8931 7.8075 13.9538 7.74048 13.9733 7.66758C13.9928 7.5946 13.9939 7.51181 13.977 7.41924C13.9597 7.32691 13.9427 7.26234 13.9258 7.22585Z" fill="currentColor"/>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+                <p>Участники говорят,<br> что Надежда ответственная, приятная в общении,<br> и в поездках<br> с ней чувствуешь себя спокойно и уверенно.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="training__wrapper training__wrapper--kaygorodov">
+                <div class="training-img-container">
+                  <img class="training-img" src="img/training/trainer-kaygorodov.jpg" srcset="img/training/trainer-kaygorodov@2x.jpg 2x" width="260" height="200" alt="Тренер Федор Кайгородов.">
+                </div>
+                <ul class="training-trainer-list training-trainer__list">
+                  <li class="training-trainer-item">
+                    <span>Федор Кайгородов</span>
+                  </li>
+                  <li class="training-trainer-item">
+                    <a class="training-trainer-link" href="#">
+                      <span class="visually-hidden">Социальная сеть тренера.</span>
+                      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.9258 7.22585C13.9088 7.18926 13.893 7.15891 13.8783 7.13459C13.6354 6.69645 13.1712 6.15865 12.4861 5.52106L12.4716 5.50646L12.4643 5.4993L12.457 5.49196H12.4497C12.1387 5.19506 11.9418 4.99543 11.8593 4.89323C11.7084 4.69854 11.6746 4.50147 11.7571 4.30179C11.8154 4.15092 12.0342 3.83232 12.4131 3.34554C12.6125 3.08756 12.7703 2.8808 12.8869 2.72502C13.7276 1.60555 14.0921 0.8902 13.9803 0.578677L13.9369 0.505878C13.9077 0.462051 13.8324 0.421956 13.711 0.385391C13.5894 0.348902 13.434 0.342868 13.2444 0.367185L11.1452 0.381709C11.1111 0.369639 11.0626 0.370764 10.9993 0.385391C10.9361 0.400017 10.9045 0.407356 10.9045 0.407356L10.868 0.425639L10.839 0.447603C10.8147 0.462127 10.788 0.487672 10.7588 0.524187C10.7297 0.560573 10.7055 0.603275 10.6861 0.651935C10.4575 1.24084 10.1977 1.78838 9.90602 2.29452C9.7262 2.59633 9.56107 2.85789 9.41026 3.07935C9.25966 3.30074 9.1333 3.46385 9.03133 3.56841C8.92921 3.67307 8.83705 3.75691 8.75428 3.82025C8.67163 3.88361 8.60855 3.91038 8.56486 3.90059C8.52108 3.8908 8.47985 3.88108 8.44081 3.87136C8.37282 3.82754 8.31813 3.76793 8.2769 3.6925C8.23549 3.61707 8.20761 3.52212 8.19303 3.40775C8.17853 3.2933 8.16995 3.19485 8.1675 3.11208C8.16523 3.02941 8.16628 2.91248 8.17121 2.76161C8.17626 2.61067 8.17853 2.50854 8.17853 2.455C8.17853 2.27002 8.18213 2.06927 8.18936 1.85269C8.19671 1.63611 8.20266 1.46451 8.20764 1.33809C8.21259 1.21154 8.21489 1.07766 8.21489 0.936508C8.21489 0.79536 8.20631 0.684665 8.18936 0.604324C8.17261 0.524084 8.1469 0.446197 8.11302 0.370688C8.07894 0.295256 8.02905 0.236904 7.96359 0.19548C7.898 0.154108 7.81646 0.121275 7.71941 0.0968811C7.46183 0.0385041 7.13384 0.00692482 6.73528 0.00201533C5.83147 -0.00770139 5.25072 0.0507522 4.99317 0.1773C4.89112 0.230767 4.79878 0.303821 4.71621 0.396232C4.62872 0.503346 4.61651 0.5618 4.67968 0.571415C4.97129 0.615166 5.17773 0.719825 5.29923 0.88529L5.34302 0.972971C5.37707 1.03623 5.41108 1.14823 5.44511 1.30881C5.47909 1.46939 5.50103 1.64703 5.51068 1.84162C5.53493 2.19697 5.53493 2.50115 5.51068 2.7542C5.48635 3.00734 5.46337 3.20441 5.44144 3.34556C5.41951 3.48671 5.38672 3.60109 5.34302 3.68866C5.29923 3.77627 5.2701 3.82981 5.2555 3.84925C5.24092 3.86868 5.22877 3.88093 5.21912 3.88573C5.15595 3.90998 5.09026 3.92233 5.02227 3.92233C4.95418 3.92233 4.87162 3.88822 4.77445 3.82004C4.6773 3.75187 4.57648 3.65824 4.47198 3.53898C4.36749 3.41969 4.24964 3.253 4.11838 3.03887C3.98723 2.82475 3.85115 2.57168 3.71023 2.27966L3.59363 2.06789C3.52074 1.93165 3.42117 1.73328 3.29481 1.47295C3.16839 1.21251 3.05664 0.960595 2.95949 0.717242C2.92066 0.615038 2.86232 0.537227 2.78458 0.483683L2.7481 0.461718C2.72385 0.442285 2.68491 0.421649 2.6315 0.399659C2.57801 0.377694 2.5222 0.361943 2.46384 0.352251L0.466599 0.366776C0.262507 0.366776 0.124028 0.413083 0.0511125 0.505571L0.0219309 0.549322C0.00735285 0.57369 0 0.612608 0 0.666178C0 0.719722 0.014578 0.785438 0.0437596 0.863249C0.33532 1.54956 0.652386 2.21144 0.994957 2.84901C1.33753 3.48658 1.63522 4.00016 1.88784 4.38929C2.14052 4.7787 2.39807 5.14622 2.6605 5.49168C2.92293 5.83726 3.09665 6.05872 3.18164 6.15602C3.26673 6.25349 3.33357 6.32637 3.38216 6.37503L3.56442 6.55021C3.68104 6.66704 3.8523 6.80696 4.07828 6.96997C4.3043 7.13309 4.55453 7.29367 4.82908 7.45197C5.10369 7.61002 5.42316 7.739 5.78766 7.83875C6.15211 7.9386 6.50683 7.97867 6.85188 7.95934H7.69016C7.86017 7.94464 7.98897 7.89109 8.07651 7.79868L8.10552 7.76209C8.12502 7.73304 8.14328 7.68791 8.16013 7.62718C8.17718 7.56635 8.18566 7.49933 8.18566 7.42643C8.18068 7.21719 8.19658 7.02861 8.23294 6.86071C8.26927 6.69287 8.31068 6.56632 8.35699 6.48109C8.40328 6.39595 8.45552 6.32409 8.51365 6.26584C8.57191 6.20747 8.61342 6.1721 8.63778 6.15993C8.66198 6.14768 8.68131 6.13937 8.69589 6.13439C8.81251 6.09547 8.94976 6.13316 9.10785 6.24764C9.26581 6.36201 9.41396 6.50324 9.55254 6.67108C9.69105 6.83908 9.85746 7.02756 10.0518 7.2368C10.2463 7.44612 10.4163 7.60171 10.562 7.70407L10.7078 7.79167C10.8051 7.85013 10.9314 7.90367 11.087 7.95233C11.2422 8.00097 11.3782 8.01314 11.495 7.98882L13.361 7.95967C13.5456 7.95967 13.6892 7.92906 13.7911 7.86833C13.8931 7.8075 13.9538 7.74048 13.9733 7.66758C13.9928 7.5946 13.9939 7.51181 13.977 7.41924C13.9597 7.32691 13.9427 7.26234 13.9258 7.22585Z" fill="currentColor"/>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+                <p>Опыт походов: Ходит в походы<br> с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="training__wrapper training__wrapper--vasnetsov">
+                <div class="training-img-container">
+                  <img class="training-img" src="img/training/trainer-vasnetsov.jpg" srcset="img/training/trainer-vasnetsov@2x.jpg 2x" width="260" height="200" alt="Тренер Даниэль Васнецов.">
+                </div>
+                <ul class="training-trainer-list training-trainer__list">
+                  <li class="training-trainer-item">
+                    <span>Даниэль Васнецов</span>
+                  </li>
+                  <li class="training-trainer-item">
+                    <a class="training-trainer-link" href="#">
+                      <span class="visually-hidden">Социальная сеть тренера.</span>
+                      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.9258 7.22585C13.9088 7.18926 13.893 7.15891 13.8783 7.13459C13.6354 6.69645 13.1712 6.15865 12.4861 5.52106L12.4716 5.50646L12.4643 5.4993L12.457 5.49196H12.4497C12.1387 5.19506 11.9418 4.99543 11.8593 4.89323C11.7084 4.69854 11.6746 4.50147 11.7571 4.30179C11.8154 4.15092 12.0342 3.83232 12.4131 3.34554C12.6125 3.08756 12.7703 2.8808 12.8869 2.72502C13.7276 1.60555 14.0921 0.8902 13.9803 0.578677L13.9369 0.505878C13.9077 0.462051 13.8324 0.421956 13.711 0.385391C13.5894 0.348902 13.434 0.342868 13.2444 0.367185L11.1452 0.381709C11.1111 0.369639 11.0626 0.370764 10.9993 0.385391C10.9361 0.400017 10.9045 0.407356 10.9045 0.407356L10.868 0.425639L10.839 0.447603C10.8147 0.462127 10.788 0.487672 10.7588 0.524187C10.7297 0.560573 10.7055 0.603275 10.6861 0.651935C10.4575 1.24084 10.1977 1.78838 9.90602 2.29452C9.7262 2.59633 9.56107 2.85789 9.41026 3.07935C9.25966 3.30074 9.1333 3.46385 9.03133 3.56841C8.92921 3.67307 8.83705 3.75691 8.75428 3.82025C8.67163 3.88361 8.60855 3.91038 8.56486 3.90059C8.52108 3.8908 8.47985 3.88108 8.44081 3.87136C8.37282 3.82754 8.31813 3.76793 8.2769 3.6925C8.23549 3.61707 8.20761 3.52212 8.19303 3.40775C8.17853 3.2933 8.16995 3.19485 8.1675 3.11208C8.16523 3.02941 8.16628 2.91248 8.17121 2.76161C8.17626 2.61067 8.17853 2.50854 8.17853 2.455C8.17853 2.27002 8.18213 2.06927 8.18936 1.85269C8.19671 1.63611 8.20266 1.46451 8.20764 1.33809C8.21259 1.21154 8.21489 1.07766 8.21489 0.936508C8.21489 0.79536 8.20631 0.684665 8.18936 0.604324C8.17261 0.524084 8.1469 0.446197 8.11302 0.370688C8.07894 0.295256 8.02905 0.236904 7.96359 0.19548C7.898 0.154108 7.81646 0.121275 7.71941 0.0968811C7.46183 0.0385041 7.13384 0.00692482 6.73528 0.00201533C5.83147 -0.00770139 5.25072 0.0507522 4.99317 0.1773C4.89112 0.230767 4.79878 0.303821 4.71621 0.396232C4.62872 0.503346 4.61651 0.5618 4.67968 0.571415C4.97129 0.615166 5.17773 0.719825 5.29923 0.88529L5.34302 0.972971C5.37707 1.03623 5.41108 1.14823 5.44511 1.30881C5.47909 1.46939 5.50103 1.64703 5.51068 1.84162C5.53493 2.19697 5.53493 2.50115 5.51068 2.7542C5.48635 3.00734 5.46337 3.20441 5.44144 3.34556C5.41951 3.48671 5.38672 3.60109 5.34302 3.68866C5.29923 3.77627 5.2701 3.82981 5.2555 3.84925C5.24092 3.86868 5.22877 3.88093 5.21912 3.88573C5.15595 3.90998 5.09026 3.92233 5.02227 3.92233C4.95418 3.92233 4.87162 3.88822 4.77445 3.82004C4.6773 3.75187 4.57648 3.65824 4.47198 3.53898C4.36749 3.41969 4.24964 3.253 4.11838 3.03887C3.98723 2.82475 3.85115 2.57168 3.71023 2.27966L3.59363 2.06789C3.52074 1.93165 3.42117 1.73328 3.29481 1.47295C3.16839 1.21251 3.05664 0.960595 2.95949 0.717242C2.92066 0.615038 2.86232 0.537227 2.78458 0.483683L2.7481 0.461718C2.72385 0.442285 2.68491 0.421649 2.6315 0.399659C2.57801 0.377694 2.5222 0.361943 2.46384 0.352251L0.466599 0.366776C0.262507 0.366776 0.124028 0.413083 0.0511125 0.505571L0.0219309 0.549322C0.00735285 0.57369 0 0.612608 0 0.666178C0 0.719722 0.014578 0.785438 0.0437596 0.863249C0.33532 1.54956 0.652386 2.21144 0.994957 2.84901C1.33753 3.48658 1.63522 4.00016 1.88784 4.38929C2.14052 4.7787 2.39807 5.14622 2.6605 5.49168C2.92293 5.83726 3.09665 6.05872 3.18164 6.15602C3.26673 6.25349 3.33357 6.32637 3.38216 6.37503L3.56442 6.55021C3.68104 6.66704 3.8523 6.80696 4.07828 6.96997C4.3043 7.13309 4.55453 7.29367 4.82908 7.45197C5.10369 7.61002 5.42316 7.739 5.78766 7.83875C6.15211 7.9386 6.50683 7.97867 6.85188 7.95934H7.69016C7.86017 7.94464 7.98897 7.89109 8.07651 7.79868L8.10552 7.76209C8.12502 7.73304 8.14328 7.68791 8.16013 7.62718C8.17718 7.56635 8.18566 7.49933 8.18566 7.42643C8.18068 7.21719 8.19658 7.02861 8.23294 6.86071C8.26927 6.69287 8.31068 6.56632 8.35699 6.48109C8.40328 6.39595 8.45552 6.32409 8.51365 6.26584C8.57191 6.20747 8.61342 6.1721 8.63778 6.15993C8.66198 6.14768 8.68131 6.13937 8.69589 6.13439C8.81251 6.09547 8.94976 6.13316 9.10785 6.24764C9.26581 6.36201 9.41396 6.50324 9.55254 6.67108C9.69105 6.83908 9.85746 7.02756 10.0518 7.2368C10.2463 7.44612 10.4163 7.60171 10.562 7.70407L10.7078 7.79167C10.8051 7.85013 10.9314 7.90367 11.087 7.95233C11.2422 8.00097 11.3782 8.01314 11.495 7.98882L13.361 7.95967C13.5456 7.95967 13.6892 7.92906 13.7911 7.86833C13.8931 7.8075 13.9538 7.74048 13.9733 7.66758C13.9928 7.5946 13.9939 7.51181 13.977 7.41924C13.9597 7.32691 13.9427 7.26234 13.9258 7.22585Z" fill="currentColor"/>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+                <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h5 class="training-education-title training-education__title">Процесс обучения</h5>
+        <ul class="training-education__list">
+          <li class="training-education__item training-education__item--map">
+            <span class="training-education-description">Изучение спортивного туристского движения</span>
+          </li>
+          <li class="training-education__item training-education__item--boot">
+            <span class="training-education-description">Подготовка<br class="training-education-description-transfer"> и техническое снаряжение в походах</span>
+          </li>
+          <li class="training-education__item training-education__item--tree">
+            <span class="training-education-description">Лекции<br class="training-education-description-transfer"> по окружающей среде, экологии и гигиене</span>
+          </li>
+          <li class="training-education__item training-education__item--mountain">
+            <span class="training-education-description">Разъяснение сложности горных препятствий</span>
+          </li>
+        </ul>
+      </section>
+      <section class="about about__container" data-test="about" id="about">
+        <ul class="about__list">
+          <li class="about__item about__item--img">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/about/about-img-desktop.jpg 1x, img/about/about-img-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/about/about-img-tablet.jpg 1x, img/about/about-img-tablet@2x.jpg 2x">
+              <img src="img/about/about-img-mobile.jpg" srcset="img/about/about-img-mobile@2x.jpg 2x" alt="Наш поход.">
+            </picture>
+          </li>
+          <li class="about__item about__item--description">
+            <h3 class="tours-title">О нас</h3>
+            <span class="tours-title-shadow about-title about-title__shadow" aria-hidden="true">О нас</span>
+            <ul>
+              <li>
+                <h5>История компании</h5>
+                <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения,<br> нам это настолько понравилось,<br> что мы этим стали жить.<br> Спустя 5 лет,<br> в 2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
+              </li>
+              <li>
+                <h5>Наша цель</h5>
+                <p>Подарить вам незабываемые впечатления от похода в горы.<br> Мы берём на себя<br> все организационные вопросы.<br> При организации мы обязательно учтём все ваши пожелания.<br> Вам останется только наслаждаться незабываемым приключением<br> в приятной компании.</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="reviews reviews__container" data-test="reviews" id="reviews">
+        <h3 class="tours-title">Отзывы</h3>
+        <span class="tours-title-shadow reviews-title reviews-title__shadow" aria-hidden="true">Отзывы</span>
+        <ul class="reviews-button-swiper-list">
+          <li class="reviews-button-swiper-item">
+            <button class="reviews-button-prev" type="button">
+              <span class="visually-hidden">Стрелка назад.</span>
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.646446 4.85355C0.451184 4.65829 0.451184 4.34171 0.646446 4.14645L3.82843 0.964466C4.02369 0.769204 4.34027 0.769204 4.53553 0.964466C4.7308 1.15973 4.7308 1.47631 4.53553 1.67157L1.70711 4.5L4.53553 7.32843C4.7308 7.52369 4.7308 7.84027 4.53553 8.03553C4.34027 8.2308 4.02369 8.2308 3.82843 8.03553L0.646446 4.85355ZM14 5H1V4H14V5Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </li>
+          <li class="reviews-button-swiper-item">
+            <button class="reviews-button-next" type="button">
+              <span class="visually-hidden">Стрелка вперёд.</span>
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3536 4.85355C13.5488 4.65829 13.5488 4.34171 13.3536 4.14645L10.1716 0.964466C9.97631 0.769204 9.65973 0.769204 9.46447 0.964466C9.2692 1.15973 9.2692 1.47631 9.46447 1.67157L12.2929 4.5L9.46447 7.32843C9.2692 7.52369 9.2692 7.84027 9.46447 8.03553C9.65973 8.2308 9.97631 8.2308 10.1716 8.03553L13.3536 4.85355ZM0 5H13V4H0V5Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <div class="swiper-reviews">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="reviews__wrapper">
+                <ul class="reviews__list">
+                  <li class="reviews__item">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/reviews/reviews-img-frolov-desktop.jpg 1x, img/reviews/reviews-img-frolov-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/reviews/reviews-img-frolov-tablet.jpg 1x, img/reviews/reviews-img-frolov-tablet@2x.jpg 2x">
+                      <img src="img/reviews/reviews-img-frolov-mobile.jpg" srcset="img/reviews/reviews-img-frolov-mobile@2x.jpg 2x" alt="Участник похода на фоне гор.">
+                    </picture>
+                  </li>
+                  <li class="reviews__item reviews__item--frolov">
+                    <p>Осенью ходили в поход на Алтай<br> с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили,<br> все показали. Делились историями<br> о местах, людях, культуре места.</p>
+                    <p>С уверенностью могу сказать,<br> что жизнь разделилась на до этого<br> и после. Ещё никогда не отдыхал<br> так душой и телом. Всем очень рекомендую!</p>
+                    <span class="reviews-name reviews__name">Фролов Александр</span>
+                    <span class="reviews-age reviews__age">38 лет, Москва</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="reviews__wrapper">
+                <ul class="reviews__list">
+                  <li class="reviews__item">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/reviews/reviews-img-solovyov-desktop.jpg 1x, img/reviews/reviews-img-solovyov-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/reviews/reviews-img-solovyov-tablet.jpg 1x, img/reviews/reviews-img-solovyov-tablet@2x.jpg 2x">
+                      <img src="img/reviews/reviews-img-solovyov-mobile.jpg" srcset="img/reviews/reviews-img-solovyov-mobile@2x.jpg 2x" alt="Участник похода на фоне гор.">
+                    </picture>
+                  </li>
+                  <li class="reviews__item">
+                    <p>Хороший полноценный поход<br> с разнообразными локациями. В начале дорога идёт по лыжне, далее прошли мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века. Было очень интересно!</p>
+                    <p>Инструктор Федор дружелюбный, внимательный к технике безопасности и своим туристам. Всем советую этот тур.</p>
+                    <span class="reviews-name reviews__name">Иван Соловьёв</span>
+                    <span class="reviews-age reviews__age">25 лет, Владивосток</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="reviews__wrapper">
+                <ul class="reviews__list">
+                  <li class="reviews__item">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/reviews/reviews-img-bazhenova-desktop.jpg 1x, img/reviews/reviews-img-bazhenova-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/reviews/reviews-img-bazhenova-tablet.jpg 1x, img/reviews/reviews-img-bazhenova-tablet@2x.jpg 2x">
+                      <img src="img/reviews/reviews-img-bazhenova-mobile.jpg" srcset="img/reviews/reviews-img-bazhenova-mobile@2x.jpg 2x" alt="Участник похода на фоне леса.">
+                    </picture>
+                  </li>
+                  <li class="reviews__item">
+                    <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык.</p>
+                    <p>Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
+                    <span class="reviews-name reviews__name">Евгения Баженова</span>
+                    <span class="reviews-age reviews__age">23 года, Кострома</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="reviews__wrapper">
+                <ul class="reviews__list">
+                  <li class="reviews__item">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/reviews/reviews-img-pirogova-desktop.jpg 1x, img/reviews/reviews-img-pirogova-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/reviews/reviews-img-pirogova-tablet.jpg 1x, img/reviews/reviews-img-pirogova-tablet@2x.jpg 2x">
+                      <img src="img/reviews/reviews-img-pirogova-mobile.jpg" srcset="img/reviews/reviews-img-pirogova-mobile@2x.jpg 2x" alt="Участник похода на фоне скал.">
+                    </picture>
+                  </li>
+                  <li class="reviews__item">
+                    <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину.</p>
+                    <p>У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно повторю такое приключение!</p>
+                    <span class="reviews-name reviews__name">Елена Пирогова</span>
+                    <span class="reviews-age reviews__age">37 лет, Тюмень</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advantages advantages__container" data-test="adv">
+        <h3 class="tours-title">Преимущества</h3>
+        <span class="tours-title-shadow advantages-title advantages-title__shadow" aria-hidden="true">Преимущества</span>
+        <div class="swiper-advantages">
+          <ul class="advantages__list swiper-wrapper">
+            <li class="advantages__item advantages__item--route advantages__item--repeat swiper-slide">
+              <h6>Индивидуальные маршруты</h6>
+              <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам.<br> Мы также можем адаптировать маршруты к вашим конкретным потребностям<br> и предпочтениям,<br> чтобы вы получили индивидуальный опыт.</p>
+            </li>
+            <li class="advantages__item advantages__item--security swiper-slide">
+              <h6>Безопасность</h6>
+              <p>Уделяем внимание безопасности клиентов, внедряя строгие<br> процедуры<br> и протоколы<br> безопасности. Имеем планы действий<br> на случай непредвиденных обстоятельств<br> и даём гарантию<br> полной безопасности<br> во время всего тура.</p>
+            </li>
+            <li class="advantages__item advantages__item--knowledge swiper-slide">
+              <h6>Экспертиза и знания</h6>
+              <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности.<br> Это гарантирует,<br> что наши клиенты находятся<br> в надёжных руках и могут<br> в полной<br> мере насладиться опытом<br> без опасений.</p>
+            </li>
+            <li class="advantages__item advantages__item--equipment swiper-slide">
+              <h6>Оборудование и снаряжение</h6>
+              <p>Мы предоставляем клиентам<br> все необходимое оборудование, необходимое для путешествия.<br> Это избавляет клиентов<br> от необходимости покупать, брать<br> с собой снаряжение,<br> что делает путешествие более удобным<br> и экономически выгодным.</p>
+            </li>
+            <li class="advantages__item advantages__item--route swiper-slide">
+              <h6>Индивидуальные маршруты</h6>
+              <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам.<br> Мы также можем адаптировать маршруты к вашим конкретным потребностям<br> и предпочтениям,<br> чтобы вы получили индивидуальный опыт.</p>
+            </li>
+            <li class="advantages__item advantages__item--nature swiper-slide">
+              <h6>Бережное отношение<br> к природе</h6>
+              <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
+            </li>
+            <li class="advantages__item advantages__item--equipment advantages__item--repeat swiper-slide">
+              <h6>Оборудование и снаряжение</h6>
+              <p>Мы предоставляем клиентам<br> все необходимое оборудование, необходимое для путешествия.<br> Это избавляет клиентов<br> от необходимости покупать, брать<br> с собой снаряжение,<br> что делает путешествие более удобным<br> и экономически выгодным.</p>
+            </li>
+          </ul>
+        </div>
+        <ul class="advantages-button-swiper-list">
+          <li class="advantages-button-swiper-item">
+            <button class="advantages-button-prev" type="button">
+              <span class="visually-hidden">Стрелка назад.</span>
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.646446 4.85355C0.451184 4.65829 0.451184 4.34171 0.646446 4.14645L3.82843 0.964466C4.02369 0.769204 4.34027 0.769204 4.53553 0.964466C4.7308 1.15973 4.7308 1.47631 4.53553 1.67157L1.70711 4.5L4.53553 7.32843C4.7308 7.52369 4.7308 7.84027 4.53553 8.03553C4.34027 8.2308 4.02369 8.2308 3.82843 8.03553L0.646446 4.85355ZM14 5H1V4H14V5Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </li>
+          <li class="advantages-button-swiper-item">
+            <button class="advantages-button-next" type="button">
+              <span class="visually-hidden">Стрелка вперёд.</span>
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3536 4.85355C13.5488 4.65829 13.5488 4.34171 13.3536 4.14645L10.1716 0.964466C9.97631 0.769204 9.65973 0.769204 9.46447 0.964466C9.2692 1.15973 9.2692 1.47631 9.46447 1.67157L12.2929 4.5L9.46447 7.32843C9.2692 7.52369 9.2692 7.84027 9.46447 8.03553C9.65973 8.2308 9.97631 8.2308 10.1716 8.03553L13.3536 4.85355ZM0 5H13V4H0V5Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="gallery gallery__container" data-test="gallery" id="gallery">
+        <div class="gallery__wrapper">
+          <h3 class="tours-title">Фотогалерея</h3>
+          <span class="tours-title-shadow gallery-title gallery-title__shadow" aria-hidden="true">Фотогалерея</span>
+          <p>Добавляйте фото в с хэштегом #лайфтур,<br> а также отмечайте нас на фото. Лучшие фотографии украсят этот раздел нашего сайта.</p>
+        </div>
+        <ul class="gallery-button-swiper-list">
+          <li class="gallery-button-swiper-item">
+            <button class="gallery-button-prev" type="button">
+              <span class="visually-hidden">Стрелка назад.</span>
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.646446 4.85355C0.451184 4.65829 0.451184 4.34171 0.646446 4.14645L3.82843 0.964466C4.02369 0.769204 4.34027 0.769204 4.53553 0.964466C4.7308 1.15973 4.7308 1.47631 4.53553 1.67157L1.70711 4.5L4.53553 7.32843C4.7308 7.52369 4.7308 7.84027 4.53553 8.03553C4.34027 8.2308 4.02369 8.2308 3.82843 8.03553L0.646446 4.85355ZM14 5H1V4H14V5Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </li>
+          <li class="gallery-button-swiper-item">
+            <button class="gallery-button-next" type="button">
+              <span class="visually-hidden">Стрелка вперёд.</span>
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3536 4.85355C13.5488 4.65829 13.5488 4.34171 13.3536 4.14645L10.1716 0.964466C9.97631 0.769204 9.65973 0.769204 9.46447 0.964466C9.2692 1.15973 9.2692 1.47631 9.46447 1.67157L12.2929 4.5L9.46447 7.32843C9.2692 7.52369 9.2692 7.84027 9.46447 8.03553C9.65973 8.2308 9.97631 8.2308 10.1716 8.03553L13.3536 4.85355ZM0 5H13V4H0V5Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <div class="swiper-gallery">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/gallery-img-mountains-desktop.jpg 1x, img/gallery/gallery-img-mountains-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/gallery/gallery-img-mountains-tablet.jpg 1x, img/gallery/gallery-img-mountains-tablet@2x.jpg 2x">
+                <img class="gallery-img gallery-img--big" src="img/gallery/gallery-img-mountains-mobile.jpg" srcset="img/gallery/gallery-img-mountains-mobile@2x.jpg" alt="Участник похода на фоне гор.">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <ul class="gallery__list">
+                <li class="gallery__item">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="img/gallery/gallery-img-bonfire-desktop.jpg 1x, img/gallery/gallery-img-bonfire-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/gallery/gallery-img-bonfire-tablet.jpg 1x, img/gallery/gallery-img-bonfire-tablet@2x.jpg 2x">
+                    <img class="gallery-img" src="img/gallery/gallery-img-bonfire-mobile.jpg" srcset="img/gallery/gallery-img-bonfire-mobile@2x.jpg" alt="Участники похода вечером у костра.">
+                  </picture>
+                </li>
+                <li class="gallery__item">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="img/gallery/gallery-img-compass-desktop.jpg 1x, img/gallery/gallery-img-compass-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/gallery/gallery-img-compass-tablet.jpg 1x, img/gallery/gallery-img-compass-tablet@2x.jpg 2x">
+                    <img class="gallery-img gallery-img--small" src="img/gallery/gallery-img-compass-mobile.jpg" srcset="img/gallery/gallery-img-compass-mobile@2x.jpg" alt="Компас на фоне гор.">
+                  </picture>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/gallery/gallery-img-rope-desktop.jpg 1x, img/gallery/gallery-img-rope-desktop@2x.jpg 2x">
+                <img class="gallery-img gallery-img--big" src="img/gallery/gallery-img-rope-tablet.jpg" srcset="img/gallery/gallery-img-rope-tablet@2x.jpg" alt="Участники похода на спуске с горы.">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <ul class="gallery__list">
+                <li class="gallery__item">
+                  <img class="gallery-img" src="img/gallery/gallery-img-glacier-desktop.jpg" srcset="img/gallery/gallery-img-glacier-desktop@2x.jpg" width="284" height="233" alt="Участники похода идут по леднику.">
+                </li>
+                <li class="gallery__item">
+                  <img class="gallery-img gallery-img--small" src="img/gallery/gallery-img-tent-desktop.jpg" srcset="img/gallery/gallery-img-tent-desktop@2x.jpg" width="284" height="223" alt="Палатка на фоне ночного звёздного неба.">
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <img class="gallery-img gallery-img--big" src="img/gallery/gallery-img-forest-desktop.jpg" srcset="img/gallery/gallery-img-forest-desktop@2x.jpg" width="284" height="463" alt="Участники похода в лесу.">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="form form__container" data-test="form">
+        <h3>Остались вопросы?</h3>
+        <p>Заполните форму и наш оператор свяжется<br> с вами для консультации.</p>
+        <form class="form__box" action="https://echo.htmlacademy.ru" method="post">
+          <ul class="form__list">
+            <li class="form__item">
+              <input class="form__input form__input--tel" id="tel" name="phone" placeholder="Телефон" type="tel" required>
+              <label class="form__label" for="tel">Телефон</label>
+            </li>
+            <li class="form__item">
+              <input class="form__input form__input--mail" id="email" name="email" placeholder="Email" type="email" pattern="[a-zA-Zа-яА-Я0-9-.]{2,}@[a-zA-Zа-яА-Я]{2,}.[a-zA-Zа-яА-Я]{2,}" required>
+              <label class="form__label" for="email">Email</label>
+            </li>
+            <li class="form__item">
+              <button class="form__button" type="submit">Отправить</button>
+            </li>
+          </ul>
+        </form>
+      </section>
+    </main>
+    <footer data-test="footer">
+      <section class="contacts contacts__container" id="contacts">
+        <ul class="contacts__main-list">
+          <li class="contacts__main-item contacts__main-item--information">
+            <h3 class="tours-title">Контакты</h3>
+            <span class="tours-title-shadow contacts-title contacts-title__shadow" aria-hidden="true">Контакты</span>
+            <p>Свяжитесь с нами любым удобным для вас способом или приходите<br> к нам в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
+            <ul class="contacts__list">
+              <li class="contacts__item contacts__item--phone">
+                <h6 class="contacts-caption">Телефон</h6>
+                <a class="contacts-description contacts-link" href="tel:+79837454545">
+                  <span class="visually-hidden">Телефон компании.</span>
+                  +7 983 745-45-45
+                </a>
+              </li>
+              <li class="contacts__item contacts__item--mail">
+                <h6 class="contacts-caption">Email</h6>
+                <a class="contacts-description contacts-link" href="mailto:info@lifetour.com">
+                  <span class="visually-hidden">Электронная почта компании.</span>
+                  info@lifetour.com
+                </a>
+              </li>
+              <li class="contacts__item contacts__item--address">
+                <h6 class="contacts-caption">Адрес</h6>
+                <span class="contacts-description">г. Москва, пр-т Мира,<br> д. 14, офис 101</span>
+              </li>
+            </ul>
+          </li>
+          <li class="contacts__main-item">
+            <div class="contacts__map-container">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/contacts/map-desktop.png 1x, img/contacts/map-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/contacts/map-tablet.png 1x, img/contacts/map-tablet@2x.png 2x">
+                <img class="contacts__map-image" src="img/contacts/map-mobile.png" srcset="img/contacts/map-mobile@2x.png 2x" alt="Наш адрес на карте.">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="footer footer__container">
+        <h3 class="visually-hidden">Подвал сайта</h3>
+        <ul class="footer__list">
+          <li class="footer__item footer__item--logo">
+            <a class="footer__logo" href="index.html">
+              <img src="img/sprite/logo-black.svg" width="142" height="42" alt="Логотип компании.">
+            </a>
+          </li>
+          <li class="footer__item">
+            <ul class="footer__navigation-list">
+              <li class="footer__navigation-item">
+                <a class="footer__navigation-link" href="#tours">Туры</a>
+              </li>
+              <li class="footer__navigation-item">
+                <a class="footer__navigation-link" href="#reviews">Отзывы</a>
+              </li>
+              <li class="footer__navigation-item">
+                <a class="footer__navigation-link" href="#training">Обучение</a>
+              </li>
+              <li class="footer__navigation-item">
+                <a class="footer__navigation-link" href="#gallery">Фотографии</a>
+              </li>
+              <li class="footer__navigation-item">
+                <a class="footer__navigation-link" href="#about">О нас</a>
+              </li>
+              <li class="footer__navigation-item">
+                <a class="footer__navigation-link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__item footer__item--phone">
+            <a class="footer__link" href="tel:+78007253232">
+              <span class="visually-hidden">Телефон компании.</span>
+              8 800 725-32-32
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--vk" href="#">
+              <span class="visually-hidden">ВКонтакте компании.</span>
+              <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5026 8.02743C17.457 7.95645 17.1747 7.38659 15.8163 6.21531C14.3942 4.98883 14.5852 5.18799 16.2981 3.06728C17.3413 1.77572 17.7584 0.986988 17.6279 0.649804C17.5037 0.328395 16.7364 0.413184 16.7364 0.413184L14.1851 0.426986C14.1851 0.426986 13.9962 0.403324 13.855 0.481212C13.7181 0.558114 13.63 0.735579 13.63 0.735579C13.63 0.735579 13.2257 1.7353 12.6866 2.58516C11.5499 4.37855 11.0946 4.4732 10.9089 4.36179C10.477 4.10249 10.5852 3.31869 10.5852 2.76263C10.5852 1.02445 10.8686 0.299803 10.0323 0.112478C9.75426 0.0503654 9.55049 0.00895679 8.8405 0.00205536C7.92992 -0.00681791 7.15838 0.00501311 6.72219 0.203183C6.4314 0.335296 6.20747 0.630086 6.34438 0.646846C6.51312 0.667551 6.89518 0.74248 7.09788 0.998819C7.36002 1.3291 7.35047 2.07248 7.35047 2.07248C7.35047 2.07248 7.50117 4.11827 6.99918 4.37263C6.65427 4.54714 6.182 4.19122 5.16848 2.56347C4.64952 1.73037 4.25685 0.808537 4.25685 0.808537C4.25685 0.808537 4.1815 0.636987 4.04672 0.545297C3.88328 0.433888 3.65404 0.398395 3.65404 0.398395L1.22797 0.412198C1.22797 0.412198 0.863949 0.422057 0.730228 0.568959C0.611365 0.700086 0.720676 0.970227 0.720676 0.970227C0.720676 0.970227 2.62036 5.09827 4.77051 7.17954C6.74342 9.0873 8.98271 8.96208 8.98271 8.96208H9.99729C9.99729 8.96208 10.304 8.93054 10.46 8.77377C10.6043 8.62983 10.599 8.35969 10.599 8.35969C10.599 8.35969 10.5789 7.09475 11.2114 6.90842C11.8344 6.72504 12.6346 8.13095 13.4825 8.67222C14.1235 9.08138 14.6107 8.99166 14.6107 8.99166L16.8786 8.96208C16.8786 8.96208 18.0651 8.89406 17.5026 8.02743Z" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--ok" href="#">
+              <span class="visually-hidden">Одноклассники компании.</span>
+              <svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.46973 2.42035C6.44164 2.42035 7.23206 3.18736 7.23206 4.1305C7.23206 5.0708 6.44164 5.83781 5.46973 5.83781C4.49781 5.83781 3.7074 5.0708 3.7074 4.1305C3.7074 3.18736 4.49781 2.42035 5.46973 2.42035ZM5.46973 8.25816C7.81755 8.25816 9.72625 6.40597 9.72625 4.1305C9.72625 1.85219 7.81755 0 5.46973 0C3.1219 0 1.21613 1.85219 1.21613 4.1305C1.21613 6.40597 3.1219 8.25816 5.46973 8.25816ZM7.19107 11.6273C8.0576 11.4342 8.89193 11.1018 9.66185 10.6331C10.2444 10.278 10.4201 9.53083 10.0541 8.96551C9.68527 8.39735 8.91827 8.22691 8.33278 8.58485C6.59094 9.6473 4.34851 9.6473 2.60374 8.58485C2.02118 8.22691 1.25126 8.39735 0.885325 8.96551C0.519392 9.53083 0.69504 10.278 1.2776 10.6331C2.04753 11.1018 2.88185 11.4342 3.74838 11.6273L1.36836 13.934C0.882397 14.4056 0.882397 15.1726 1.36836 15.6442C1.61426 15.88 1.93043 15.9993 2.24952 15.9993C2.56861 15.9993 2.88771 15.88 3.13361 15.6442L5.46973 13.3772L7.80877 15.6442C8.29472 16.1186 9.08221 16.1186 9.5711 15.6442C10.0571 15.1726 10.0571 14.4056 9.5711 13.934L7.19107 11.6273Z" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--reddit" href="#">
+              <span class="visually-hidden">Реддит компании.</span>
+              <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.28065 0C8.80424 0 8.35718 0.244007 8.07043 0.59589C7.78368 0.947774 7.62563 1.37671 7.51048 1.82877C7.32759 2.55565 7.27114 3.36216 7.2576 4.08904C5.91867 4.17894 4.70619 4.57962 3.69918 5.19863C3.29051 4.85188 2.79829 4.65925 2.32639 4.66438C1.78902 4.66952 1.27874 4.90325 0.899414 5.38356C0.174635 6.30051 0.258177 7.80051 1.09811 8.69178C1.04618 8.96661 1.00779 9.24914 1.00779 9.53425C1.00779 12.5548 4.06496 15 7.83561 15C11.6063 15 14.6634 12.5522 14.6634 9.53425C14.6634 9.24914 14.625 8.96661 14.5731 8.69178C15.413 7.80051 15.4966 6.30051 14.7718 5.38356C14.3925 4.90325 13.8822 4.66952 13.3448 4.66438C12.8729 4.65925 12.3807 4.85188 11.972 5.19863C10.9695 4.58219 9.76384 4.18151 8.43169 4.08904C8.44975 3.41866 8.49717 2.7226 8.63038 2.19863C8.71393 1.86986 8.81327 1.63099 8.91939 1.5C9.02551 1.36901 9.10228 1.31507 9.28065 1.31507C9.66675 1.31507 9.71642 1.44092 9.94899 1.74658C10.0664 1.90068 10.2019 2.09332 10.4186 2.28082C10.6354 2.46832 10.956 2.63014 11.3037 2.63014V1.31507C11.2066 1.31507 11.1886 1.3125 11.1231 1.25342C11.0576 1.19435 10.9673 1.05822 10.8341 0.883562C10.5676 0.531678 10.0506 0 9.28065 0ZM13.0378 0.123288C12.1391 0.123288 11.4121 0.950343 11.4121 1.9726C11.4121 2.99486 12.1391 3.82192 13.0378 3.82192C13.9364 3.82192 14.6634 2.99486 14.6634 1.9726C14.6634 0.950343 13.9364 0.123288 13.0378 0.123288ZM13.0378 0.780822C13.6158 0.780822 14.0854 1.31507 14.0854 1.9726C14.0854 2.63014 13.6158 3.16438 13.0378 3.16438C12.4597 3.16438 11.9901 2.63014 11.9901 1.9726C11.9901 1.31507 12.4597 0.780822 13.0378 0.780822ZM7.83561 5.11644C11.035 5.11644 13.7422 7.14298 13.7422 9.53425C13.7422 11.9281 11.035 13.9521 7.83561 13.9521C4.6362 13.9521 1.92901 11.9281 1.92901 9.53425C1.92901 7.14298 4.6362 5.11644 7.83561 5.11644ZM2.34445 5.71233C2.50476 5.7149 2.67185 5.75599 2.83216 5.83562C2.25188 6.33647 1.79128 6.91182 1.47743 7.56164C1.26067 7.05308 1.31938 6.41866 1.58581 6.08219C1.77999 5.83562 2.04867 5.70976 2.34445 5.71233ZM13.3268 5.71233C13.6226 5.70976 13.8912 5.83562 14.0854 6.08219C14.3518 6.41866 14.4106 7.05308 14.1938 7.56164C13.8799 6.91182 13.4193 6.33647 12.8391 5.83562C12.9994 5.75599 13.1665 5.7149 13.3268 5.71233ZM5.52355 7.35616C4.94553 7.35616 4.47589 7.89041 4.47589 8.54795C4.47589 9.20548 4.94553 9.73973 5.52355 9.73973C6.10156 9.73973 6.5712 9.20548 6.5712 8.54795C6.5712 7.89041 6.10156 7.35616 5.52355 7.35616ZM10.1477 7.35616C9.56966 7.35616 9.10002 7.89041 9.10002 8.54795C9.10002 9.20548 9.56966 9.73973 10.1477 9.73973C10.7257 9.73973 11.1953 9.20548 11.1953 8.54795C11.1953 7.89041 10.7257 7.35616 10.1477 7.35616ZM4.96359 11.4041C5.33163 12.2697 6.4696 13.1096 7.83561 13.1096C9.20163 13.1096 10.3577 12.2697 10.7257 11.4041C10.0574 11.8947 9.00293 12.226 7.83561 12.226C6.66829 12.226 5.63192 11.8947 4.96359 11.4041Z" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a class="footer__privacy-policy-link" href="#">
+          <span class="visually-hidden">Политика конфиденциальности компании.</span>
+          Политика конфиденциальности
+        </a>
+      </section>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

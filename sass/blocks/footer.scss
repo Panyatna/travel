@@ -1,0 +1,281 @@
+.footer__container {
+  text-align: center;
+  padding: 23px 15px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 34px 45px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 41px 120px 32px;
+  }
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
+}
+
+.footer__item {
+  &--phone {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      padding-top: 14px;
+      display: block;
+    }
+  }
+
+  &--logo {
+    @media (min-width: $desktop-width) {
+      padding: 0 29px;
+    }
+  }
+}
+
+.footer__link {
+  color: $primary-color;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: $weight-semibold;
+  margin-left: 55px;
+  display: block;
+
+  &:hover {
+    color: $additional-opacity-color;
+  }
+
+  &:focus {
+    color: $additional-color;
+    outline: none;
+  }
+
+  &:active {
+    color: $dark-blue-color;
+  }
+
+  &:disabled {
+    color: $gray-color;
+    pointer-events: none;
+  }
+}
+
+.footer__navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+    gap: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 23px;
+  }
+}
+
+.footer__navigation-item {
+  width: 120px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+
+    &:nth-child(2) {
+      order: 4;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+    }
+
+    &:nth-child(4) {
+      order: 5;
+    }
+
+    &:nth-child(5) {
+      order: 3;
+    }
+
+    &:nth-child(6) {
+      order: 6;
+    }
+  }
+}
+
+.footer__navigation-link {
+  line-height: 22px;
+  color: $primary-color;
+  padding: 2px 4px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $primary-color;
+  }
+
+  &:focus {
+    border: 1px solid $primary-color;
+    outline: none;
+    padding: 2px 3px;
+  }
+
+  &:active {
+    color: $additional-color;
+  }
+
+  &:disabled {
+    color: $gray-color;
+    pointer-events: none;
+  }
+}
+
+.footer__social-list {
+  display: flex;
+  margin-top: 19px;
+  gap: 16px;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 25px;
+  }
+}
+
+.footer__privacy-policy-link {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: $weight-light;
+  margin: 23px auto 0;
+  display: block;
+  cursor: pointer;
+  color: $primary-color;
+  width: 200px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 22px;
+  }
+
+  &:hover {
+    opacity: 50%;
+  }
+
+  &:focus {
+    border-bottom: 1px solid $primary-color;
+  }
+
+  &:active {
+    color: $additional-color;
+  }
+}
+
+.footer__social-link {
+  text-align: center;
+  display: block;
+  border: 1px solid $primary-opacity-color;
+  color: $primary-color;
+  width: 30px;
+  cursor: pointer;
+
+
+  @media (min-width: $desktop-width) {
+    width: 27px;
+  }
+
+  &--vk {
+    padding-top: 3px;
+    height: 25px;
+
+    &:focus {
+      border: none;
+      padding: 4px 1px 1px;
+    }
+
+    &:active {
+      background-color: $additional-color;
+      border: none;
+      color: $white-color;
+      padding: 4px 1px 1px;
+    }
+  }
+
+  &--ok {
+    padding-top: 6px;
+    height: 22px;
+
+    &:focus {
+      border: none;
+      padding: 7px 1px 1px;
+    }
+
+    &:active {
+      background-color: $additional-color;
+      border: none;
+      color: $white-color;
+      padding: 7px 1px 1px;
+    }
+  }
+
+  &--reddit {
+    padding-top: 5px;
+    height: 23px;
+
+    &:focus {
+      border: none;
+      padding: 6px 1px 1px;
+    }
+
+    &:active {
+      background-color: $additional-color;
+      border: none;
+      color: $white-color;
+      padding: 6px 1px 1px;
+    }
+  }
+
+  &:hover {
+    border: 1px solid $primary-color;
+  }
+
+  &:disabled {
+    opacity: 50%;
+    pointer-events: none;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+  }
+}
+
+.footer__logo {
+  &:hover {
+    opacity: 50%;
+  }
+
+  &:focus {
+    border-bottom: 1px solid $primary-color;
+  }
+
+  &:active {
+    opacity: 25%;
+  }
+}

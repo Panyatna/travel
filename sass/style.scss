@@ -1,0 +1,24 @@
+// Vendor
+@import "vendor/normalize";
+
+// Global
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/reset.scss";
+
+// Blocks
+@import "blocks/page-body.scss";
+@import "blocks/visually-hidden.scss";
+@import "blocks/header.scss";
+@import "blocks/main.scss";
+@import "blocks/hero.scss";
+@import "blocks/swiper.scss";
+@import "blocks/tours.scss";
+@import "blocks/training.scss";
+@import "blocks/about.scss";
+@import "blocks/reviews.scss";
+@import "blocks/advantages.scss";
+@import "blocks/gallery.scss";
+@import "blocks/form.scss";
+@import "blocks/contacts.scss";
+@import "blocks/footer.scss";

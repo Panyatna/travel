@@ -1,0 +1,177 @@
+.gallery__container {
+  position: relative;
+  padding-top: 37px;
+  height: 420px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    height: 563px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 123px;
+    height: 618px;
+  }
+}
+
+.gallery-title__shadow {
+  top: 23px;
+
+  @media (min-width: $tablet-width) {
+    top: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 106px;
+    left: 120px;
+  }
+}
+
+.gallery__wrapper {
+  padding: 0 15px 31px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 45px 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 120px 45px;
+  }
+}
+
+.gallery__wrapper br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.gallery__wrapper p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 26px;
+  max-width: 260px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 30px;
+    max-width: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 24px;
+    max-width: 610px;
+  }
+}
+
+.gallery__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-img {
+  width: 158px;
+  height: 135px;
+
+  @media (min-width: $tablet-width) {
+    width: 252px;
+    height: 210px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 284px;
+    height: 233px;
+  }
+
+  &--big {
+    width: 158px;
+    height: 266px;
+
+    @media (min-width: $tablet-width) {
+      width: 253px;
+      height: 418px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 284px;
+      height: 463px;
+    }
+  }
+
+  &--small {
+    width: 157px;
+    height: 125px;
+
+    @media (min-width: $tablet-width) {
+      width: 252px;
+      height: 202px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 284px;
+      height: 224px;
+    }
+  }
+}
+
+.gallery .swiper-slide {
+  @media (min-width: $tablet-width) {
+    width: 289px;
+  }
+}
+
+
+.gallery-button-swiper-list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    position: absolute;
+    top: 146px;
+    right: 45px;
+    gap: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.gallery-button-next,
+.gallery-button-prev {
+  cursor: pointer;
+  width: 37px;
+  height: 35px;
+  color: $white-color;
+  background-color: $additional-color;
+
+  &:hover {
+    color: $dark-blue-color;
+    border: 1px solid $dark-blue-color;
+    background-color: $white-color;
+  }
+
+  &:focus {
+    color: $dark-blue-color;
+    background-color: $white-color;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $dark-blue-color;
+    color: $white-color;
+  }
+
+  &:disabled {
+    background-color: $gray-color;
+    pointer-events: none;
+  }
+}

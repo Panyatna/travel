@@ -1,0 +1,408 @@
+.training {
+  position: relative;
+}
+
+.training__container {
+  padding: 37px 15px 19px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 45px 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 62px 120px 64px;
+  }
+}
+
+.training-title__shadow {
+  top: 21px;
+
+  @media (min-width: $tablet-width) {
+    top: 45px;
+  }
+}
+
+.training p {
+  line-height: 20px;
+  margin-top: 33px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 32px;
+    width: 800px;
+  }
+}
+
+.training-education-wrapper br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.training__title {
+  margin-top: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 62px;
+  }
+}
+
+.training__wrapper {
+  border: 1px solid $additional-opacity-color;
+  padding: 14px;
+  background-color: $white-color;
+
+  @media (min-width: $tablet-width) {
+    min-height: 358px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 326px;
+  }
+
+  &--prokofiev br {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--afigenova br {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  &--kolesnichenko br {
+    &:not(:nth-child(2)) {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+      }
+
+      @media (min-width: $desktop-width) {
+        display: none;
+      }
+    }
+  }
+}
+
+.training__wrapper p {
+  width: 240px;
+  margin-top: 15px;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.training-trainer-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.training-trainer__list {
+  margin-top: 15px;
+}
+
+.training-trainer-item span {
+  display: block;
+  line-height: 16px;
+  font-weight: $weight-bold;
+  width: 140px;
+}
+
+.training-trainer-link {
+  text-align: center;
+  display: block;
+  border: 1px solid $primary-opacity-color;
+  color: $primary-color;
+  width: 22px;
+  height: 22px;
+
+  &:hover {
+    border: 1px solid $primary-color;
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+    padding: 1px;
+  }
+
+  &:active {
+    background-color: $additional-color;
+    border: none;
+    color: $white-color;
+    padding: 1px;
+  }
+
+  &:disabled {
+    opacity: 50%;
+    width: 24px;
+    height: 24px;
+    padding: 1px;
+    pointer-events: none;
+  }
+}
+
+.training-button-swiper-list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    position: absolute;
+    top: 218px;
+    right: 45px;
+    gap: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 235px;
+    right: 120px;
+  }
+}
+
+.training-button-prev,
+.training-button-next {
+  cursor: pointer;
+  width: 37px;
+  height: 35px;
+  color: $white-color;
+  background-color: $additional-color;
+
+  &:hover {
+    color: $dark-blue-color;
+    border: 1px solid $dark-blue-color;
+    background-color: $white-color;
+  }
+
+  &:focus {
+    color: $dark-blue-color;
+    background-color: $white-color;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $dark-blue-color;
+    color: $white-color;
+  }
+
+  &:disabled {
+    background-color: $gray-color;
+    pointer-events: none;
+  }
+}
+
+.training-education-title {
+  font-weight: $weight-bold;
+  font-size: 16px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    line-height: 21px;
+  }
+}
+
+.training-education__title {
+  margin-top: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 58px;
+  }
+}
+
+.training-education__list {
+  padding-left: 29px;
+  margin-top: 23px;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 104px 172px;
+    padding: 0;
+    margin-top: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 10px;
+    margin-top: 27px;
+  }
+
+  &::before {
+    content: "";
+    height: 170px;
+    position: absolute;
+    top: 26px;
+    left: 6px;
+    border-left: 2px solid $additional-color;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      content: "";
+      width: 1166px;
+      position: absolute;
+      bottom: -10px;
+      left: 34px;
+      border-bottom: 2px solid $additional-color;
+    }
+  }
+}
+
+.training-education__item {
+  padding-left: 34px;
+  background-repeat: no-repeat;
+  background-position-y: 1px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 4;
+    }
+
+    &:nth-child(4) {
+      order: 2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:nth-child(2) {
+      order: 2;
+    }
+
+    &:nth-child(3) {
+      order: 3;
+    }
+
+    &:nth-child(4) {
+      order: 4;
+    }
+  }
+
+  &--map {
+    background-image: url("../../img/sprite/map-icon.svg");
+  }
+
+  &--boot {
+    background-image: url("../../img/sprite/boot-icon.svg");
+  }
+
+  &--tree {
+    background-image: url("../../img/sprite/tree-icon.svg");
+  }
+
+  &--mountain {
+    background-image: url("../../img/sprite/mountain-icon.svg");
+  }
+
+  &::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 12px;
+    left: -29px;
+    border-radius: 50%;
+    background-color: $additional-color;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      top: 74px;
+      left: 9px;
+    }
+  }
+}
+
+.training-education-description {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  width: 200px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.training-education-description-transfer {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.training-img-container {
+  overflow: hidden;
+}
+
+.training-img {
+  object-fit: cover;
+  display: block;
+  margin: auto;
+
+  @media (min-width: $tablet-width) {
+    object-position: -30px;
+    width: 243px;
+  }
+
+  @media (min-width: $desktop-width) {
+    object-position: 0;
+    width: 255px;
+  }
+}

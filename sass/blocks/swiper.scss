@@ -1,0 +1,77 @@
+.swiper-pagination {
+  @media (min-width: $desktop-width) {
+    margin-left: 550px;
+  }
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-height: 14px;
+  --swiper-pagination-bullet-size: 14px;
+  --swiper-pagination-bullet-inactive-color: transparent;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 10px;
+  border: 1px solid $white-color;
+
+  @media (min-width: $tablet-width) {
+    --swiper-pagination-bullet-height: 18px;
+    --swiper-pagination-bullet-size: 18px;
+  }
+
+  &:hover {
+    background-color: $light-gray-color;
+  }
+
+  &:focus {
+    outline: 1px solid $white-opacity-color;
+  }
+
+  &:active {
+    background-color: $white-opacity-color;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  --swiper-theme-color: #ffffff;
+}
+
+.swiper-pagination-horizontal {
+  --swiper-pagination-bottom: 34px;
+
+  @media (min-width: $desktop-width) {
+    --swiper-pagination-bottom: 86px;
+  }
+}
+
+.swiper-hero {
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper-tours {
+  overflow: hidden;
+}
+
+.swiper-training {
+  overflow: hidden;
+  margin-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 16px;
+  }
+}
+
+.swiper-advantages {
+  overflow: hidden;
+}
+
+.swiper-advantages .advantages__item--repeat {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

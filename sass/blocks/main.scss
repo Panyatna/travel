@@ -1,0 +1,97 @@
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
+.main__mountain-background {
+  position: absolute;
+  top: 578px;
+  right: 0;
+  width: 141px;
+  height: 595px;
+  background-image: url("../../img/main/main-background-mobile.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/main/main-background-mobile@2x.jpg");
+    background-size: 141px 595px;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 942px;
+    right: -177px;
+    width: 602px;
+    height: 1630px;
+    background-image: url("../../img/main/main-background-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/main/main-background-tablet@2x.jpg");
+      background-size: 602px 1630px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 674px;
+    right: 0;
+  }
+}
+
+.main__cloud-small-background {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 2283px;
+    right: 0;
+    width: 465px;
+    height: 280px;
+    background-image: url("../../img/main/main-cloud-small-background-tablet.jpg");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/main/main-cloud-small-background-tablet@2x.jpg");
+      background-size: 465px 280px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 2226px;
+    right: 0;
+    width: 633px;
+    height: 280px;
+    background-image: url("../../img/main/main-cloud-small-background-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/main/main-cloud-small-background-desktop@2x.jpg");
+      background-size: 633px 280px;
+    }
+  }
+}
+
+.main__cloud-big-background {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 4066px;
+    right: 0;
+    width: 768px;
+    height: 996px;
+    background-image: url("../../img/main/main-cloud-big-background-tablet.jpg");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/main/main-cloud-big-background-tablet@2x.jpg");
+      background-size: 768px 996px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 3517px;
+    right: 0;
+    width: 1440px;
+    height: 447px;
+    background-image: url("../../img/main/main-cloud-big-background-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/main/main-cloud-big-background-desktop@2x.jpg");
+      background-size: 1440px 447px;
+    }
+  }
+}
